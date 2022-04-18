@@ -19,7 +19,7 @@ func ReadFileLines(fpath string)  []string {
  
 	if err != nil {
 		log.Fatalf("failed to open file: %s", err)
-        os.Exit(1)
+		os.Exit(1)
 	}
  
 	fileScanner := bufio.NewScanner(readFile)
@@ -120,12 +120,12 @@ func main() {
                      }
                     }
 
-            } else { os.Exit(0)}        // if the file contains a single column then no point to the sum
+            } else { os.Exit(0)}        // if the file contains a single column then no point to calculate the sum
             
             os.Exit(0)
 
         }   else {
-            fmt.Println("Please provide a path to a file as an argument")
+            fmt.Println("Please provide a path and a filename as a first argument")
             os.Exit(1)
         }
 
